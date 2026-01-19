@@ -29,6 +29,9 @@ const ExpenseSchema = new mongoose.Schema({
     unique: true,
     sparse: true
   }
-}, { toJSON: { getters: true } });
+}, { 
+  toJSON: { getters: true },
+  toObject: { getters: true }
+});
 
 export default mongoose.model("Expense", ExpenseSchema);
